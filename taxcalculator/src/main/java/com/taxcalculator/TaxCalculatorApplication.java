@@ -6,7 +6,6 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 import com.taxcalculator.domain.Item;
 import com.taxcalculator.inputreader.ItemInputReader;
@@ -16,20 +15,6 @@ import com.taxcalculator.receipt.processor.ReceiptProcessor;
 public class TaxCalculatorApplication {
 
 	private static final String INPUT_TEST_CASES_SUB_FOLDER_PATH = "src/test/resources/inputtestcases";
-//
-//	public static void main(String[] args) {
-//		TaxCalculatorApplication taxCalculatorApplication = new TaxCalculatorApplication();
-//		List<Receipt> receiptList = taxCalculatorApplication.createReceiptList(INPUT_TEST_CASES_SUB_FOLDER_PATH);
-//		System.out.println("OUTPUT \n");
-//
-//		IntStream.range(0, receiptList.size()).forEach(i -> {
-//
-//			System.out.println("Output " + (i + 1) + ": ");
-//			System.out.println(receiptList.get(i).print());
-//			System.out.println();
-//
-//		});
-//	}
 
 	public List<Receipt> createReceiptList(String inputTestCasesSubFolderPath) {
 		List<String> inputFileNameList = getInputFileNameList(inputTestCasesSubFolderPath);
